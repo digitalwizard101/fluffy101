@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Cost</title>
+    <script>
+      const handleSubmit = () => {
+        const distance = document.getElementById("dist").value;
+        const mileage = document.getElementById("mil").value;
+        const fuelPrice = document.getElementById("fp").value;
+        const tc = (distance / mileage) * fuelPrice;
+        document.getElementById("tc").innerHTML = tc;
+      };
+
+      const handleClear = () => {
+        document.getElementById("dist").value = "";
+        document.getElementById("mil").value = "";
+        document.getElementById("fp").value = "";
+        document.getElementById("tc").innerHTML = "0";
+      };
+    </script>
+  </head>
+  <body>
+    <div>
+      <table>
+        <tr>
+          <td>Distance</td>
+          <td>Mileage</td>
+          <td>Fuel Price</td>
+          <td>Travel Cost</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="tel" id="dist" />
+          </td>
+          <td>
+            <input type="tel" id="mil" />
+          </td>
+          <td>
+            <input type="tel" id="fp" />
+          </td>
+          <td>
+            <h1 id="tc" style="text-align: center">0</h1>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button onclick="handleSubmit()">Submit</button>
+          </td>
+          <td>
+            <button onclick="handleClear()">Clear</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

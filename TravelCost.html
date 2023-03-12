@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Cost</title>
+    <script>
+        function finalResult(){
+            const dist=document.getElementById("dist").value;
+            const mil=document.getElementById("mil").value;
+            const fp=document.getElementById("fp").value;
+            const tc=(dist/mil)*fp;
+            document.getElementById("tc").innerHTML=tc
+        }
+        
+    </script>
+</head>
+<body>
+    <div>
+      
+    <table  >
+        <tr >
+            <th>Distance</th>
+            <th>Mileage</th>
+            <th>Fuel Price</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+        
+            <td>
+                <input type="number" name="" id="dist">
+            </td>
+            <td><input type="number" name="" id="mil"></td>
+            <td><input type="number" name="" id="fp"></td>
+            <td>
+               <h1 id="tc">
+                  0
+               </h1> 
+            </td>
+        </tr>
+        <tr>
+            <td><button onclick="finalResult()">Submit</button></td>
+            <td><button onclick="clear()">Clear</button></td>
+        </tr>
+    </table>
+
+    </div>
+</body>
+</html>
